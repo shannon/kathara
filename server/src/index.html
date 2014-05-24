@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="kathara">
 	<head>
 		<meta charset="utf-8">
 		<title>Kathara</title>
@@ -18,15 +18,8 @@
     <!-- inject:css -->
     <!-- endinject -->
     
-		<script>
-			var kathara;
-			window.addEventListener('DOMContentLoaded', function(){
-				kathara = new Kathara(document.body);
-				kathara.connect('localhost');
-			});
-			
-		</script>
 	</head>
-	<body>
+	<body ui-view>
+
 	</body>
 </html>

@@ -5,11 +5,9 @@ var path      = require('path')
   , concat    = require('gulp-concat')  
   , less      = require('gulp-less')  
   , watch     = require('gulp-watch')
-  , ejs       = require('gulp-ejs')
   , inject    = require('gulp-inject')
   , rename    = require('gulp-rename')
   , ngHtml2Js = require('gulp-ng-html2js')
-  , plumber   = require('gulp-plumber')
   , package   = require('./package.json');
 ;
 

@@ -33,7 +33,6 @@
     "gulp-less": "~1.2.3",
     "gulp-inject": "~0.4.1",
     "gulp-rename": "~1.2.0",
-    "gulp-ng-html2js": "~0.1.7",
-    "gulp-plumber": "~0.6.2"
+    "gulp-ng-html2js": "~0.1.7"
   }
 }

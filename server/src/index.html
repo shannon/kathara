@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Kathara</title>
+		<!-- font awesome from BootstrapCDN -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- angular -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    
+    <!-- websockets -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+    
+		<script>
+			var kathara;
+			window.addEventListener('DOMContentLoaded', function(){
+				kathara = new Kathara(document.body);
+				kathara.connect('localhost');
+			});
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

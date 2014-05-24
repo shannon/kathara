@@ -1,0 +1,39 @@
+{
+  "name": "kathara-server",
+  "version": "0.0.0",
+  "description": "Kathara Game Server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shannon Poole",
+  "dependencies": {
+    "express": "~4.1.1",
+    "body-parser": "~1.0.2",
+    "cookie-parser": "~1.0.1",
+    "express-session": "~1.0.4",
+    "connect-mongo": "~0.4.1",
+    "socket.io": "~0.8.6",
+    "mong.socket.io": "~0.9.3",
+    "ejs": "~1.0.0",
+    "winston": "~0.7.3",
+    "fs-extra": "~0.8.1",
+    "cannon": "~0.5.0",
+    "mongoose-q": "0.0.10",
+    "mongoose": "~3.8.11",
+    "q": "~1.0.1",
+    "bson": "~0.2.8"
+  },
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-util": "~2.2.14",
+    "gulp-clean": "~0.2.4",
+    "gulp-watch": "~0.6.5",
+    "gulp-less": "~1.2.3",
+    "gulp-inject": "~0.4.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-ng-html2js": "~0.1.7",
+    "gulp-plumber": "~0.6.2"
+  }
+}

@@ -20,11 +20,6 @@ gulp.task('html', function(){
     .pipe(gulp.dest('./build/assets/'));
 });
 
-gulp.task('js', function(){
-  return gulp.src('./src/**/*.js')
-    .pipe(gulp.dest('./build'));
-});
-
 gulp.task('less', function () {  
   return gulp.src('./src/less/main.less')
     .pipe(less())
@@ -39,8 +34,13 @@ gulp.task('assets', function(){
 });
 
 gulp.task('vendor', function(){
-  return gulp.src('./vendor/**/*.js')
+  return gulp.src(['./vendor/**/*.js', './node_modules/cannon/build/cannon.min.js'])
     .pipe(gulp.dest('./build/vendor'));
+});
+
+gulp.task('js', function(){
+  return gulp.src('./src/**/*.js')
+    .pipe(gulp.dest('./build'));
 });
 
 gulp.task('index', function(){
@@ -49,14 +49,14 @@ gulp.task('index', function(){
   .pipe(gulp.dest("./build"));
 })
 
-gulp.task('build', ['html', 'js', 'less', 'assets', 'vendor', 'index']);
+gulp.task('build', ['html', 'less', 'assets', 'vendor', 'js', 'index']);
 
 gulp.task('watch', function () { 
   watch({ glob: './src/**/*.tpl.html' },  ['html', 'index']);
-  watch({ glob: './src/**/*.js' },        ['js', 'index']);
   watch({ glob: './src/**/*.less' },      ['less', 'index']);
   watch({ glob: './src/assets/**/*.*' },  ['assets']);
   watch({ glob: './vendor/**/*.js' },     ['vendor', 'index']);
+  watch({ glob: './src/**/*.js' },        ['js', 'index']);
   watch({ glob: './src/index.html' },     ['index']);
 });
 
